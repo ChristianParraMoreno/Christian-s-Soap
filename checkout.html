@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Jai's tag -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-319592072"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    
+    gtag('config', 'AW-319592072');
+    </script>
+
+    
+    <!-- Jonathan's Tag -->
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18024142456"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+  
+    gtag('config', 'AW-18024142456');
+  </script>
+
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Christian's Soap</title>
+  <meta name="description" content="Complete your handcrafted botanical soap order at Christian's Soap." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-cream: #faf7f2;
+      --bg-sand: #f1ebe1;
+      --bg-card: #ffffff;
+      --forest: #24382f;
+      --forest-light: #385447;
+      --sage: #dce5de;
+      --terracotta: #c47451;
+      --terracotta-dark: #a85d3c;
+      --gold: #d4a359;
+      --text-main: #222624;
+      --text-muted: #5c6460;
+      --border: #e4ddd3;
+      --shadow-sm: 0 4px 16px rgba(36, 56, 47, 0.06);
+      --shadow-md: 0 12px 32px rgba(36, 56, 47, 0.1);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    header {
+      background: rgba(250, 247, 242, 0.95);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .back-link:hover {
+      color: var(--forest);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--forest);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+
+    .logo svg {
+      width: 26px;
+      height: 26px;
+      color: var(--terracotta);
+    }
+
+    .secure-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--forest);
+      background: var(--sage);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .checkout-wrapper {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px 24px 80px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .card-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .panel-header h1 {
+      font-size: 2rem;
+      color: var(--forest);
+    }
+
+    .autofill-btn {
+      background: var(--sage);
+      color: var(--forest);
+      border: 1px solid #c2d1c6;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .autofill-btn:hover {
+      background: var(--forest);
+      color: #fff;
+    }
+
+    .form-section {
+      margin-bottom: 28px;
+    }
+
+    .form-section h2 {
+      font-size: 1.35rem;
+      color: var(--forest);
+      margin-bottom: 14px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    input, select {
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--bg-cream);
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--forest);
+      background: #fff;
+    }
+
+    .shipping-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .radio-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      background: var(--bg-cream);
+      transition: var(--transition);
+    }
+
+    .radio-card.selected {
+      border-color: var(--forest);
+      background: #f3f7f4;
+    }
+
+    .radio-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .radio-left strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--forest);
+    }
+
+    .radio-left small {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .summary-panel {
+      position: sticky;
+      top: 90px;
+    }
+
+    .summary-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 20px;
+      max-height: 340px;
+      overflow-y: auto;
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px;
+      background: var(--bg-cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .color-swatch {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1.5px solid var(--forest);
+      flex-shrink: 0;
+    }
+
+    .item-left h4 {
+      font-size: 0.92rem;
+      color: var(--forest);
+    }
+
+    .item-left small {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .qty-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .promo-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .promo-box input {
+      flex: 1;
+    }
+
+    .promo-btn {
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      padding: 0 18px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .cost-breakdown {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cost-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .cost-row.discount {
+      color: #2c6e49;
+      font-weight: 600;
+    }
+
+    .cost-row.total {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--forest);
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-top: 4px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--terracotta);
+      color: #fff;
+      border: none;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+
+    .submit-btn:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(196, 116, 81, 0.3);
+    }
+
+    .confirmation-view {
+      display: none;
+      max-width: 680px;
+      margin: 56px auto 96px;
+      padding: 0 24px;
+    }
+
+    .confirmation-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .check-circle {
+      width: 68px;
+      height: 68px;
+      background: var(--sage);
+      color: var(--forest);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 20px;
+    }
+
+    .confirmation-card h1 {
+      font-size: 2.5rem;
+      color: var(--forest);
+      margin-bottom: 10px;
+    }
+
+    .order-receipt {
+      background: var(--bg-cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 28px 0;
+      text-align: left;
+    }
+
+    .receipt-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 0.9rem;
+    }
+
+    .receipt-row:last-child {
+      border-bottom: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--forest);
+      padding-top: 12px;
+    }
+
+    @media (max-width: 880px) {
+      .checkout-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .summary-panel {
+        position: static;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="back-link" onclick="goBackToShop(event)">
+        ← Back to Shop
+      </a>
+
+      <a href="index.html" class="logo" onclick="goBackToShop(event)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1.5 0 3-.3 4.3-.9-.8-1.4-1.3-3-1.3-4.6 0-5 4-9 9-9 .3 0 .6 0 .9.1C23.2 4.3 18 2 12 2z"/>
+          <path d="M7 14c1.5-2 4-3 7-3"/>
+        </svg>
+        Christian's Soap
+      </a>
+
+      <span class="secure-badge">🔒 Secure Checkout</span>
+    </div>
+  </header>
+
+  <main class="checkout-wrapper" id="checkoutView">
+    <div class="card-panel">
+      <div class="panel-header">
+        <h1>Shipping &amp; Payment</h1>
+        <button type="button" class="autofill-btn" onclick="fillDemoCustomer()">
+          ⚡ Auto-Fill Demo Info
+        </button>
+      </div>
+
+      <form id="checkoutForm" onsubmit="submitOrder(event)">
+        <div class="form-section">
+          <h2>1. Contact Information</h2>
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="email">Email Address (for order receipt &amp; tracking)</label>
+              <input type="email" id="email" placeholder="you@example.com" required value="customer@example.com" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>2. Shipping Address</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="Christian" required value="Alex" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Parra" required value="Rivera" />
+            </div>
+            <div class="form-group full">
+              <label for="address">Street Address</label>
+              <input type="text" id="address" placeholder="742 Evergreen Terrace" required value="1600 Amphitheatre Pkwy" />
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="Mountain View" required value="Mountain View" />
+            </div>
+            <div class="form-group">
+              <label for="state">State / Province</label>
+              <input type="text" id="state" placeholder="CA" required value="CA" />
+            </div>
+            <div class="form-group">
+              <label for="zip">ZIP / Postal Code</label>
+              <input type="text" id="zip" placeholder="94043" required value="94043" />
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country">
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>3. Delivery Method</h2>
+          <div class="shipping-options">
+            <label class="radio-card selected" id="shipStandardCard" onclick="selectShipping('standard')">
+              <div class="radio-left">
+                <input type="radio" name="shipping" value="standard" checked />
+                <div>
+                  <strong>Eco-Botanical Ground Shipping (3–5 Business Days)</strong>
+                  <small>Plastic-free parcel • Free on orders $35+</small>
+                </div>
+              </div>
+              <strong id="standardShipPrice">$5.00</strong>
+            </label>
+
+            <label class="radio-card" id="shipExpressCard" onclick="selectShipping('express')">
+              <div class="radio-left">
+                <input type="radio" name="shipping" value="express" />
+                <div>
+                  <strong>Priority 2-Day Air</strong>
+                  <small>Expedited carbon-neutral delivery</small>
+                </div>
+              </div>
+              <strong>$12.00</strong>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>4. Payment Details (Demo Mode)</h2>
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="cardNum">Card Number</label>
+              <input type="text" id="cardNum" value="4242 •••• •••• 4242" required />
+            </div>
+            <div class="form-group">
+              <label for="expiry">Expiration (MM/YY)</label>
+              <input type="text" id="expiry" value="08/29" required />
+            </div>
+            <div class="form-group">
+              <label for="cvc">Security Code (CVC)</label>
+              <input type="text" id="cvc" value="888" required />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="completeOrderBtn">
+          Complete Order →
+        </button>
+      </form>
+    </div>
+
+    <aside class="card-panel summary-panel">
+      <div class="panel-header" style="margin-bottom: 16px;">
+        <h2 style="font-size: 1.6rem; color: var(--forest);">Order Summary</h2>
+        <button type="button" class="autofill-btn" onclick="addSampleBar()">+ Add Another Bar</button>
+      </div>
+
+      <div class="summary-items" id="summaryItems"></div>
+
+      <div class="promo-box">
+        <input type="text" id="promoInput" placeholder="Promo code (try SOAP10)" aria-label="Promo code" />
+        <button type="button" class="promo-btn" onclick="applyPromo()">Apply</button>
+      </div>
+      <small id="promoMsg" style="display:block; margin-top:-12px; margin-bottom:12px; color:#2c6e49; font-weight:600;"></small>
+
+      <div class="cost-breakdown">
+        <div class="cost-row">
+          <span>Subtotal (<span id="summaryItemCount">0</span> bars)</span>
+          <span id="summarySubtotal">$0.00</span>
+        </div>
+        <div class="cost-row discount" id="bundleDiscountRow" style="display:none;">
+          <span>3+ Bar Bundle Savings (15% Off)</span>
+          <span id="summaryBundleDiscount">-$0.00</span>
+        </div>
+        <div class="cost-row discount" id="promoDiscountRow" style="display:none;">
+          <span>Promo Code (SOAP10 — 10% Off)</span>
+          <span id="summaryPromoDiscount">-$0.00</span>
+        </div>
+        <div class="cost-row">
+          <span>Shipping</span>
+          <span id="summaryShipping">$5.00</span>
+        </div>
+        <div class="cost-row total">
+          <span>Total Due</span>
+          <span id="summaryTotal">$0.00</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <section class="confirmation-view" id="confirmationView">
+    <div class="confirmation-card">
+      <div class="check-circle">✓</div>
+      <span class="secure-badge" style="margin-bottom: 12px;">Order Confirmed</span>
+      <h1>Thank you for your order!</h1>
+      <p style="color: var(--text-muted); max-width: 460px; margin: 0 auto;">
+        Your handcrafted soaps are being wrapped in biodegradable seeded paper and prepared for shipment.
+      </p>
+
+      <div class="order-receipt" id="orderReceipt"></div>
+
+      <a href="index.html" class="submit-btn" style="display: inline-block; text-decoration: none; width: auto; padding: 14px 36px;" onclick="goBackToShop(event)">
+        ← Continue Shopping
+      </a>
+    </div>
+  </section>
+
+  <script>
+    const STORAGE_KEY = 'christians_soap_cart';
+
+    const PRODUCTS = [
+      { id: 'oat-honey', name: 'Oat Milk & Raw Honey', price: 10, color: '#EFE4D2' },
+      { id: 'eucalyptus-clay', name: 'Eucalyptus & French Green Clay', price: 11, color: '#8FA998' },
+      { id: 'charcoal-teatree', name: 'Activated Charcoal & Tea Tree', price: 11, color: '#3A3F3D' },
+      { id: 'rose-kaolin', name: 'Rosewater & Pink Kaolin Clay', price: 12, color: '#DDA7A0' },
+      { id: 'citrus-calendula', name: 'Blood Orange & Calendula Scrub', price: 10, color: '#D98A5C' },
+      { id: 'lavender-chamomile', name: 'Highland Lavender & Shea', price: 10, color: '#9E93B0' }
+    ];
+
+    let cart = {};
+    let shippingMode = 'standard';
+    let promoApplied = false;
+
+    function loadCart() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) cart = JSON.parse(saved);
+      } catch (e) {
+        cart = {};
+      }
+      if (!cart || Object.keys(cart).length === 0) {
+        cart = { 'oat-honey': 2, 'eucalyptus-clay': 1 };
+        saveCart();
+      }
+    }
+
+    function saveCart() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+      } catch (e) {}
+    }
+
+    function changeQty(id, delta) {
+      cart[id] = (cart[id] || 0) + delta;
+      if (cart[id] <= 0) delete cart[id];
+      saveCart();
+      renderSummary();
+    }
+
+    function addSampleBar() {
+      const next = PRODUCTS.find(p => !cart[p.id]) || PRODUCTS[0];
+      cart[next.id] = (cart[next.id] || 0) + 1;
+      saveCart();
+      renderSummary();
+    }
+
+    function selectShipping(mode) {
+      shippingMode = mode;
+      document.getElementById('shipStandardCard').classList.toggle('selected', mode === 'standard');
+      document.getElementById('shipExpressCard').classList.toggle('selected', mode === 'express');
+      renderSummary();
+    }
+
+    function applyPromo() {
+      const code = document.getElementById('promoInput').value.trim().toUpperCase();
+      const msg = document.getElementById('promoMsg');
+      if (code === 'SOAP10') {
+        promoApplied = true;
+        msg.textContent = '✓ SOAP10 applied (10% off)!';
+        msg.style.color = '#2c6e49';
+      } else {
+        msg.textContent = 'Try code SOAP10 for 10% off';
+        msg.style.color = '#a85d3c';
+      }
+      renderSummary();
+    }
+
+    function calculateTotals() {
+      let totalQty = 0;
+      let rawSubtotal = 0;
+
+      Object.entries(cart).forEach(([id, qty]) => {
+        const product = PRODUCTS.find(p => p.id === id);
+        if (product) {
+          totalQty += qty;
+          rawSubtotal += product.price * qty;
+        }
+      });
+
+      const bundleDiscount = totalQty >= 3 ? rawSubtotal * 0.15 : 0;
+      const afterBundle = rawSubtotal - bundleDiscount;
+      const promoDiscount = promoApplied ? afterBundle * 0.10 : 0;
+      const discountedSubtotal = afterBundle - promoDiscount;
+
+      const standardCost = discountedSubtotal >= 35 || totalQty === 0 ? 0 : 5;
+      const shippingCost = totalQty === 0 ? 0 : (shippingMode === 'express' ? 12 : standardCost);
+      const finalTotal = discountedSubtotal + shippingCost;
+
+      return {
+        totalQty,
+        rawSubtotal,
+        bundleDiscount,
+        promoDiscount,
+        standardCost,
+        shippingCost,
+        finalTotal
+      };
+    }
+
+    function renderSummary() {
+      const container = document.getElementById('summaryItems');
+      const entries = Object.entries(cart);
+
+      if (entries.length === 0) {
+        container.innerHTML = `<p style="color: var(--text-muted); text-align:center; padding: 16px;">Your bag is empty. Click "+ Add Another Bar" above!</p>`;
+      } else {
+        container.innerHTML = entries.map(([id, qty]) => {
+          const p = PRODUCTS.find(item => item.id === id);
+          if (!p) return '';
+          return `
+            <div class="summary-item">
+              <div class="item-left">
+                <div class="color-swatch" style="background: ${p.color}"></div>
+                <div>
+                  <h4>${p.name}</h4>
+                  <small>$${p.price}.00 × ${qty} = <strong>$${(p.price * qty).toFixed(2)}</strong></small>
+                </div>
+              </div>
+              <div class="qty-controls">
+                <button type="button" class="qty-btn" onclick="changeQty('${id}', -1)">−</button>
+                <strong>${qty}</strong>
+                <button type="button" class="qty-btn" onclick="changeQty('${id}', 1)">+</button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      const totals = calculateTotals();
+
+      document.getElementById('summaryItemCount').textContent = totals.totalQty;
+      document.getElementById('summarySubtotal').textContent = `$${totals.rawSubtotal.toFixed(2)}`;
+
+      const bundleRow = document.getElementById('bundleDiscountRow');
+      bundleRow.style.display = totals.bundleDiscount > 0 ? 'flex' : 'none';
+      document.getElementById('summaryBundleDiscount').textContent = `-$${totals.bundleDiscount.toFixed(2)}`;
+
+      const promoRow = document.getElementById('promoDiscountRow');
+      promoRow.style.display = totals.promoDiscount > 0 ? 'flex' : 'none';
+      document.getElementById('summaryPromoDiscount').textContent = `-$${totals.promoDiscount.toFixed(2)}`;
+
+      document.getElementById('standardShipPrice').textContent =
+        totals.standardCost === 0 ? 'FREE' : '$5.00';
+
+      document.getElementById('summaryShipping').textContent =
+        totals.shippingCost === 0 ? 'FREE' : `$${totals.shippingCost.toFixed(2)}`;
+
+      document.getElementById('summaryTotal').textContent = `$${totals.finalTotal.toFixed(2)}`;
+      document.getElementById('completeOrderBtn').textContent =
+        `Complete Order • $${totals.finalTotal.toFixed(2)} →`;
+    }
+
+    function fillDemoCustomer() {
+      document.getElementById('email').value = 'christian.soap.fan@example.com';
+      document.getElementById('firstName').value = 'Christian';
+      document.getElementById('lastName').value = 'Parra';
+      document.getElementById('address').value = '1600 Amphitheatre Pkwy';
+      document.getElementById('city').value = 'Mountain View';
+      document.getElementById('state').value = 'CA';
+      document.getElementById('zip').value = '94043';
+    }
+
+    function submitOrder(e) {
+      e.preventDefault();
+      const totals = calculateTotals();
+      if (totals.totalQty === 0) {
+        addSampleBar();
+        return;
+      }
+
+      const orderId = 'CS-' + Math.floor(10000 + Math.random() * 90000);
+      const email = document.getElementById('email').value;
+      const fullName = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
+      const address = `${document.getElementById('address').value}, ${document.getElementById('city').value}, ${document.getElementById('state').value} ${document.getElementById('zip').value}`;
+
+      // Fire Google Ads / Analytics Purchase Conversion Event if gtag is present
+      if (typeof gtag === 'function') {
+        gtag('event', 'purchase', {
+          transaction_id: orderId,
+          value: Number(totals.finalTotal.toFixed(2)),
+          currency: 'USD'
+        });
+      }
+
+      const itemLines = Object.entries(cart).map(([id, qty]) => {
+        const p = PRODUCTS.find(item => item.id === id);
+        return p ? `<div class="receipt-row"><span>${p.name} × ${qty}</span><span>$${(p.price * qty).toFixed(2)}</span></div>` : '';
+      }).join('');
+
+      document.getElementById('orderReceipt').innerHTML = `
+        <div class="receipt-row"><span>Order Number</span><strong>#${orderId}</strong></div>
+        <div class="receipt-row"><span>Customer</span><span>${fullName} (${email})</span></div>
+        <div class="receipt-row"><span>Ship To</span><span>${address}</span></div>
+        ${itemLines}
+        <div class="receipt-row"><span>Total Charged</span><span>$${totals.finalTotal.toFixed(2)}</span></div>
+      `;
+
+      cart = {};
+      saveCart();
+
+      document.getElementById('checkoutView').style.display = 'none';
+      document.getElementById('confirmationView').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goBackToShop(e) {
+      if (e) e.preventDefault();
+      const query = window.location.search || '';
+      window.location.href = 'index.html' + query;
+    }
+
+    loadCart();
+    renderSummary();
+  </script>
+</body>
+</html>
