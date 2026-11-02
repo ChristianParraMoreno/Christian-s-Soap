@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Christian Moreno's Soapmaking Hobby Blog</title>
+    <link>./index.html</link>
+    <description>Weekend notes, funny kitchen mishaps, and simple guides on making handmade cold-process bar soap from scratch by Christian Moreno.</description>
+    <language>en-us</language>
+    <item>
+      <title>How I Actually Make Soap at Home (Without Turning It Into a Brick)</title>
+      <link>./cold-process-guide.html</link>
+      <description>A simple, beginner-friendly walkthrough of the 5 steps to turn olive oil, coconut oil, and shea butter into real handmade bar soap—plus pictures of the process.</description>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Welcome to My Soapmaking Hobby Blog (And the "Scented Candle" Disaster)</title>
+      <link>./index.html</link>
+      <description>How a failed homemade holiday gift turned into a weekend obsession with making natural bar soap from kitchen oils.</description>
+      <pubDate>Sat, 24 Oct 2026 14:30:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
