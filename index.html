@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian's Handmade Soap | Small-Batch Cold Process Soap</title>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <title>Christian Moreno's Soapmaking Blog | Notes from a Weekend Soap Maker</title>
   <meta
     name="description"
-    content="Handmade small-batch cold process bar soap made by college student Christian Miller in Corvallis, Oregon. Simple natural ingredients: olive oil, coconut oil, shea butter, and essential oils."
+    content="Personal hobby blog by Christian Moreno sharing simple recipes, funny kitchen stories, and beginner-friendly guides on making natural bar soap at home."
   />
-
+  <link rel="alternate" type="application/rss+xml" title="Christian Moreno's Soapmaking Blog RSS Feed" href="rss.xml" />
   <!-- Jai's tag -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-319592072"></script>
@@ -18,12 +19,10 @@
     gtag('js', new Date());
     gtag('config', 'AW-319592072');
   </script>
-
     <!-- Event snippet for Christians Soap Landing page conversion page -->
   <script>
     gtag('event', 'conversion', {'send_to': 'AW-319592072/XrRYCMzvl68dEIitspgB'});
   </script>
-
   <!-- Jonathan's Tag -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18024142456"></script>
@@ -33,385 +32,286 @@
     gtag('js', new Date());
     gtag('config', 'AW-18024142456');
   </script>
-
     <!-- Event snippet for Christian Soap conversion page -->
     <script>
       gtag('event', 'conversion', {'send_to': 'AW-18024142456/Mq2FCLvcnK8dEPisypJD'});
     </script>
-
   <style>
+    :root {
+      --bg-page: #faf8f4;
+      --bg-paper: #ffffff;
+      --bg-callout: #f2f5f1;
+      --text-main: #222523;
+      --text-muted: #555c57;
+      --accent-green: #264e3a;
+      --accent-orange: #c86428;
+      --border-line: #dedad2;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #222222;
-      background-color: #faf9f5;
-      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      line-height: 1.7;
       margin: 0;
       padding: 0;
+      font-size: 16px;
     }
-
-    .wrapper {
-      max-width: 840px;
+    .container {
+      max-width: 820px;
       margin: 0 auto;
-      padding: 24px 20px;
-      background-color: #ffffff;
-      border-left: 1px solid #e5e2dc;
-      border-right: 1px solid #e5e2dc;
+      padding: 28px 24px 44px;
+      background-color: var(--bg-paper);
+      border-left: 1px solid var(--border-line);
+      border-right: 1px solid var(--border-line);
     }
-
     header {
-      border-bottom: 2px solid #2e5a44;
-      padding-bottom: 16px;
-      margin-bottom: 24px;
+      border-bottom: 2px solid var(--accent-green);
+      padding-bottom: 18px;
+      margin-bottom: 26px;
     }
-
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
     header h1 {
-      margin: 0 0 6px 0;
-      font-size: 28px;
-      color: #1f3d2e;
+      margin: 0 0 4px 0;
+      font-family: Georgia, serif;
+      font-size: 29px;
+      color: var(--accent-green);
     }
-
-    header p {
+    header p.subtitle {
       margin: 0;
-      color: #555555;
+      color: var(--text-muted);
       font-size: 15px;
     }
-
+    .rss-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--accent-orange);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .rss-btn:hover {
+      background-color: #a9501c;
+    }
     nav {
-      margin-top: 14px;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-line);
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
     }
-
     nav a {
-      color: #2e5a44;
+      color: var(--accent-green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
       text-decoration: underline;
-      margin-right: 18px;
-      font-size: 15px;
-      font-weight: 500;
     }
-
     h2 {
-      font-size: 21px;
-      color: #1f3d2e;
-      border-bottom: 1px solid #e5e2dc;
-      padding-bottom: 6px;
+      font-family: Georgia, serif;
+      font-size: 22px;
+      color: var(--accent-green);
       margin-top: 32px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border-line);
+      padding-bottom: 6px;
     }
-
     p {
-      margin: 0 0 14px 0;
+      margin: 0 0 16px 0;
     }
-
-    .about-box {
-      background-color: #f4f6f3;
-      border: 1px solid #d5dfd7;
-      padding: 16px 20px;
+    .hero-banner {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border-line);
+      margin-bottom: 20px;
+    }
+    .featured-post {
+      background-color: var(--bg-callout);
+      border: 1px solid #c6d4c9;
+      border-left: 5px solid var(--accent-green);
+      padding: 20px 22px;
       border-radius: 6px;
-      margin-bottom: 24px;
+      margin: 26px 0;
     }
-
-    .soap-list {
+    .featured-post h2 {
+      margin-top: 4px;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .btn-green {
+      display: inline-block;
+      margin-top: 6px;
+      background-color: var(--accent-green);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn-green:hover {
+      background-color: #1b3829;
+    }
+    .favorites-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-bottom: 24px;
+      gap: 16px;
+      margin: 18px 0;
     }
-
-    .soap-item {
-      border: 1px solid #dcd8d0;
+    .fav-card {
+      border: 1px solid var(--border-line);
       border-radius: 6px;
       padding: 16px;
-      background-color: #ffffff;
+      background-color: #fdfcfa;
     }
-
-    .soap-swatch {
-      height: 80px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 14px;
-      color: #333333;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .soap-item h3 {
+    .fav-card h3 {
       margin: 0 0 6px 0;
-      font-size: 18px;
+      font-size: 17px;
+      color: var(--accent-green);
     }
-
-    .price {
-      font-weight: bold;
-      color: #1f3d2e;
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    .ingredients {
-      font-size: 13px;
-      color: #555555;
-      background-color: #f9f8f4;
-      padding: 8px;
-      border-radius: 4px;
-      margin-top: 10px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
+    .fav-card p {
+      margin: 0;
       font-size: 14px;
+      color: var(--text-muted);
     }
-
-    th, td {
-      border: 1px solid #dcd8d0;
-      padding: 10px 12px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #f4f6f3;
-      color: #1f3d2e;
-    }
-
-    .order-box {
-      background-color: #f4f6f3;
-      border: 1px solid #2e5a44;
-      padding: 20px;
-      border-radius: 6px;
-      margin-bottom: 24px;
-    }
-
-    .email-link {
-      display: inline-block;
-      background-color: #2e5a44;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 4px;
-      font-weight: 600;
-      margin-top: 6px;
-    }
-
-    .email-link:hover {
-      background-color: #214231;
-    }
-
-    .policy-block {
-      font-size: 14px;
-      color: #333333;
-      margin-bottom: 18px;
-    }
-
     footer {
-      margin-top: 36px;
+      margin-top: 40px;
       padding-top: 18px;
-      border-top: 1px solid #dcd8d0;
+      border-top: 1px solid var(--border-line);
       font-size: 13px;
-      color: #555555;
+      color: var(--text-muted);
     }
-
     @media (max-width: 640px) {
-      .soap-list {
+      .favorites-grid {
         grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="container">
     <header>
-      <h1>Christian's Handmade Soap</h1>
-      <p>Small-Batch Cold Process Bar Soap · Made in Corvallis, Oregon</p>
-      <nav aria-label="Main Navigation">
-        <a href="#about">About Me</a>
-        <a href="#soaps">Available Soaps</a>
-        <a href="#how-to-order">How to Order</a>
-        <a href="#shipping-returns">Shipping &amp; Returns</a>
-        <a href="#privacy-terms">Privacy &amp; Terms</a>
-        <a href="#contact">Contact</a>
+      <div class="header-top">
+        <div>
+          <h1>Christian Moreno's Soapmaking Blog</h1>
+          <p class="subtitle">Notes, recipes, and lessons from my weekend bar-soap hobby</p>
+        </div>
+        <a class="rss-btn" href="rss.xml" title="Subscribe to RSS Feed">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <circle cx="6.18" cy="17.82" r="2.18"/>
+            <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+          </svg>
+          Subscribe via RSS
+        </a>
+      </div>
+      <nav aria-label="Primary Navigation">
+        <a href="index.html">Home &amp; My Story</a>
+        <a href="cold-process-guide.html">Blog Post: How I Make Soap Step-by-Step</a>
+        <a href="#why-homemade">Why Make Your Own Soap?</a>
+        <a href="#favorite-bars">My 4 Favorite Recipes</a>
+        <a href="rss.xml">RSS Feed</a>
       </nav>
     </header>
-
     <main>
-      <section id="about" class="about-box">
-        <h2 style="margin-top: 0; border-bottom: none; padding-bottom: 0;">Hi, I'm Christian</h2>
+      <article>
+        <img
+          class="hero-banner"
+          src="image_5_curing_rack.jpg"
+          alt="Handmade cold-process soap bars resting on a wooden curing rack"
+        />
+        <h2>How a Terrible Homemade Candle Turned Me Into a Soap Guy</h2>
         <p>
-          I am a full-time college student studying chemistry in Corvallis, Oregon. Two years ago I started making traditional cold-process bar soap in my apartment kitchen as a weekend hobby after store-bought soaps kept drying out my hands.
+          Hi, I'm Christian Moreno! People usually laugh when they find out my favorite weekend hobby is standing in an apron with safety goggles, turning olive oil and coconut oil into bars of soap. Honestly, I didn't plan on becoming "the soap guy" either.
         </p>
-        <p style="margin-bottom: 0;">
-          Friends and classmates started asking to buy extra bars from my batches, so I put together this page to share my remaining cured bars and help pay for textbooks and tuition. Every bar is hand-mixed from food-grade plant oils, cut by hand, and cured on wooden racks for 6 weeks before it is ready to use.
-        </p>
-      </section>
-
-      <section id="soaps">
-        <h2>Current Cured Soap Batches ($8.00 per Bar)</h2>
         <p>
-          All bars weigh between 4.5 oz and 5.0 oz when cured. Buy any 3 bars for $22.00. Because I make these in 20-bar wooden molds between classes, quantities are limited to what is currently cured on my shelf.
+          Two years ago, I tried to save money on holiday gifts by making homemade scented candles for my family. Long story short: I misread the wax thermometer, used way too much cinnamon oil, and produced six jars of grey wax that smelled like burnt toast and refused to stay lit for more than four seconds. My sister still uses hers as a doorstop.
         </p>
-
-        <div class="soap-list">
-          <div class="soap-item">
-            <div class="soap-swatch" style="background-color: #efe5cf;">
-              Bar #1: Oatmeal &amp; Raw Honey (4.8 oz)
-            </div>
-            <h3>1. Oatmeal &amp; Raw Honey Bar</h3>
-            <div class="price">$8.00 per bar · In Stock (12 bars left)</div>
-            <p>
-              Unscented and mild for everyday hand and body washing. Made with finely ground rolled oats for gentle texture and local Willamette Valley wildflower honey.
-            </p>
-            <div class="ingredients">
-              <strong>Ingredients:</strong> Saponified Olive Oil, Coconut Oil, Shea Butter, Distilled Water, Raw Honey, Ground Rolled Oats.
-            </div>
-          </div>
-
-          <div class="soap-item">
-            <div class="soap-swatch" style="background-color: #d8e4d4;">
-              Bar #2: Peppermint &amp; Rosemary (4.7 oz)
-            </div>
-            <h3>2. Peppermint &amp; Rosemary Leaf Bar</h3>
-            <div class="price">$8.00 per bar · In Stock (15 bars left)</div>
-            <p>
-              A clean, refreshing morning shower bar scented with pure steam-distilled peppermint and rosemary essential oils, plus dried rosemary specks.
-            </p>
-            <div class="ingredients">
-              <strong>Ingredients:</strong> Saponified Olive Oil, Coconut Oil, Shea Butter, Castor Oil, Distilled Water, Peppermint Essential Oil, Rosemary Essential Oil, Dried Crushed Rosemary Leaf.
-            </div>
-          </div>
-
-          <div class="soap-item">
-            <div class="soap-swatch" style="background-color: #cfd4d2;">
-              Bar #3: Pine Needle &amp; Charcoal (4.9 oz)
-            </div>
-            <h3>3. Activated Charcoal &amp; Fir Needle Bar</h3>
-            <div class="price">$8.00 per bar · In Stock (9 bars left)</div>
-            <p>
-              Great after workouts, gardening, or hiking. Activated hardwood charcoal helps wash away dirt and oil while Douglas fir needle oil gives a crisp woodsy scent.
-            </p>
-            <div class="ingredients">
-              <strong>Ingredients:</strong> Saponified Olive Oil, Coconut Oil, Shea Butter, Distilled Water, Activated Hardwood Charcoal, Fir Needle Essential Oil, Cedarwood Essential Oil.
-            </div>
-          </div>
-
-          <div class="soap-item">
-            <div class="soap-swatch" style="background-color: #f2dcd0;">
-              Bar #4: Sweet Orange &amp; Pink Clay (4.8 oz)
-            </div>
-            <h3>4. Sweet Orange Peel &amp; Kaolin Clay Bar</h3>
-            <div class="price">$8.00 per bar · In Stock (14 bars left)</div>
-            <p>
-              Rose kaolin clay creates a smooth, creamy lather that works well for everyday washing. Scented naturally with cold-pressed sweet orange peel oil.
-            </p>
-            <div class="ingredients">
-              <strong>Ingredients:</strong> Saponified Olive Oil, Coconut Oil, Shea Butter, Sweet Almond Oil, Distilled Water, Rose Kaolin Clay, Sweet Orange Peel Essential Oil.
-            </div>
-          </div>
-        </div>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Package Option</th>
-              <th>Price</th>
-              <th>Shipping Cost (USPS Ground)</th>
-              <th>Local Corvallis Pickup</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1 Bar of Soap (Your Choice)</td>
-              <td>$8.00</td>
-              <td>$4.00 flat rate</td>
-              <td>Free pickup</td>
-            </tr>
-            <tr>
-              <td>2 Bars of Soap (Mix &amp; Match)</td>
-              <td>$16.00</td>
-              <td>$4.00 flat rate</td>
-              <td>Free pickup</td>
-            </tr>
-            <tr>
-              <td>3-Bar Bundle (Mix &amp; Match — Save $2)</td>
-              <td>$22.00</td>
-              <td>$4.00 flat rate</td>
-              <td>Free pickup</td>
-            </tr>
-            <tr>
-              <td>4 Bars or More</td>
-              <td>$7.25 per bar</td>
-              <td>FREE USPS Shipping</td>
-              <td>Free pickup</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section id="how-to-order">
-        <h2>How to Place an Order by Email</h2>
-        <div class="order-box">
-          <p>
-            Because I make these soaps in small batches between classes, I take orders directly by email so I can confirm your bars are in stock on my curing rack before you pay.
-          </p>
-          <p>
-            <strong>To place an order, send an email to:</strong><br />
-            <a class="email-link" href="mailto:christian@christianshandmadesoap.com?subject=Soap%20Order%20Request">
-              christian@christianshandmadesoap.com
-            </a>
-          </p>
-          <p style="margin-top: 12px; margin-bottom: 0; font-size: 14px;">
-            Please include which soap varieties you would like, how many bars, and whether you prefer <strong>USPS shipping</strong> (include your mailing address) or <strong>free local pickup in Corvallis, OR</strong>. I reply within 24 hours with your order total and payment/pickup details.
-          </p>
-        </div>
-      </section>
-
-      <section id="shipping-returns">
-        <h2>Shipping, Returns &amp; Refund Policy</h2>
-        <div class="policy-block">
-          <p>
-            <strong>Order Processing &amp; Shipping:</strong> I pack and mail orders every Tuesday and Friday morning at the Corvallis post office via USPS Ground Advantage. Delivery within Oregon and Washington typically takes 2–3 business days, and 3–5 business days for the rest of the United States. You will receive a USPS tracking number by email as soon as your package is mailed.
-          </p>
-          <p>
-            <strong>Returns &amp; 30-Day Refund Guarantee:</strong> If your soap arrives damaged in the mail or you are unhappy with your order for any reason, please email me within 30 days of delivery at <strong>christian@christianshandmadesoap.com</strong>. Unopened bars in their original paper wrap may be returned within 30 days for a full refund. If you tried your first bar and it was not a good fit for your skin, let me know and I will gladly refund your single bar price or send a different variety at no charge.
-          </p>
-        </div>
-      </section>
-
-      <section id="privacy-terms">
-        <h2>Privacy Policy &amp; Terms of Service</h2>
-        <div class="policy-block">
-          <p>
-            <strong>Privacy Policy:</strong> Christian's Handmade Soap only uses the name, email address, and mailing address you send by email to reply to your inquiry and fulfill your soap order. I never sell, rent, or share your personal contact information with third parties. Standard website analytics and Google Ads conversion measurement cookies are used on this page to measure ad visits.
-          </p>
-          <p>
-            <strong>Terms &amp; Product Disclaimer:</strong> All soaps are traditional cosmetic cleansing bars made from saponified plant oils. Please read the full ingredient list on each bar if you have nut, plant, or essential oil allergies. For external use only. Keep bars on a draining soap dish between uses so they last longer.
-          </p>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Contact Information</h2>
         <p>
-          Have a question about ingredients, curing times, or a custom batch for gifts? Feel free to email or call me between classes:
+          Determined to redeem myself the following month, I borrowed a beginner's book on traditional cold-process soapmaking. My very first batch—a simple mix of olive oil, coconut oil, and ground oatmeal—looked like lumpy mashed potatoes when I poured it into a wooden box. But after sitting on a closet shelf for a month, it turned into the best, creamiest bar of soap I had ever used. Even better, my dry winter hands stopped itching almost overnight. Now, every few weekends, I test a new scent or natural ingredient and write down what worked (and what didn't) right here on this blog.
         </p>
-        <ul>
-          <li><strong>Maker:</strong> Christian Miller</li>
-          <li><strong>Mailing Address:</strong> 418 NW Monroe Ave, Apt B, Corvallis, OR 97330</li>
-          <li><strong>Order &amp; Support Email:</strong> <a href="mailto:christian@christianshandmadesoap.com">christian@christianshandmadesoap.com</a></li>
-          <li><strong>Phone:</strong> (541) 555-0194 (Mon–Fri, 4:00 PM – 8:00 PM PT)</li>
-        </ul>
-      </section>
+        <!-- Featured Blog Entry Link -->
+        <div class="featured-post">
+          <span style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--accent-green);">Latest Blog Entry · Illustrated Guide</span>
+          <h2>How I Actually Make Soap at Home (In 5 Simple Steps)</h2>
+          <p>
+            Curious how liquid kitchen oils turn into a solid bar of soap without any weird factory detergents? In this post, I break down the whole process in plain English—from mixing the oils and hitting "pudding stage" to slicing the loaf and letting the bars cure—complete with photos from my workbench.
+          </p>
+          <a class="btn-green" href="cold-process-guide.html">
+            Read the Step-by-Step Soapmaking Post →
+          </a>
+        </div>
+        <section id="why-homemade">
+          <h2>Why Homemade Soap Feels So Different From Store-Bought Bars</h2>
+          <p>
+            If you read the fine print on most grocery-store "beauty bars," they aren't actually soap—they are solid detergent cakes. Commercial factories skim off all the natural moisturizing glycerin produced during soapmaking so they can sell it separately for lotions, leaving behind a bar that leaves your skin feeling tight and chalky.
+          </p>
+          <p>
+            When you make cold-process soap at home using real plant oils (like olive oil, coconut oil, and shea butter), all of that natural glycerin stays locked inside the bar. Plus, by adding a tiny bit of extra oil—a trick soapmakers call <strong>"superfatting"</strong>—the bar leaves your hands soft instead of squeaky-dry.
+          </p>
+        </section>
+        <section id="favorite-bars">
+          <h2>4 Recipes Currently Sitting on My Curing Rack</h2>
+          <p>
+            After twenty batches of trial and error, these four recipes are the ones my friends and family always ask to grab whenever they visit:
+          </p>
+          <div class="favorites-grid">
+            <div class="fav-card">
+              <h3>1. Oatmeal &amp; Raw Honey</h3>
+              <p>
+                My go-to unscented bar. Finely blended rolled oats give it a gentle scrub, and a spoonful of raw honey makes the lather super rich and soothing for dry hands.
+              </p>
+            </div>
+            <div class="fav-card">
+              <h3>2. Peppermint &amp; Rosemary Leaf</h3>
+              <p>
+                The ultimate wake-up shower bar. Made with pure peppermint and rosemary essential oils plus crushed rosemary leaves for a fresh, herbal garden scent.
+              </p>
+            </div>
+            <div class="fav-card">
+              <h3>3. Pine Needle &amp; Charcoal</h3>
+              <p>
+                Smells like a walk in the woods after it rains. A pinch of activated charcoal helps wash away grime after yardwork or a long workout without drying out your skin.
+              </p>
+            </div>
+            <div class="fav-card">
+              <h3>4. Sweet Orange &amp; Pink Clay</h3>
+              <p>
+                Natural rose clay gives this bar a smooth, silky glide and a warm terracotta color, while sweet orange peel oil makes the whole bathroom smell like fresh citrus.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
     </main>
-
     <footer>
-      <p>© 2026 Christian's Handmade Soap · Corvallis, Oregon · All rights reserved.</p>
       <p>
-        <a href="#about">About</a> ·
-        <a href="#soaps">Soap Varieties</a> ·
-        <a href="#how-to-order">How to Order</a> ·
-        <a href="#shipping-returns">Shipping &amp; Returns</a> ·
-        <a href="#privacy-terms">Privacy &amp; Terms</a> ·
-        <a href="#contact">Contact</a>
+        © 2026 Christian Moreno's Soapmaking Blog · A personal hobby project about handmade cold-process soap.
+      </p>
+      <p>
+        <strong>Privacy &amp; Cookie Note:</strong> This is a personal hobby blog with no store checkout or user accounts. Standard anonymous analytics and Google Ads cookies are used to measure page visits. Want updates when I post a new recipe? <a href="rss.xml">Subscribe to the RSS Feed</a>.
+      </p>
+      <p>
+        <a href="index.html">Home</a> ·
+        <a href="cold-process-guide.html">Step-by-Step Soapmaking Post</a> ·
+        <a href="rss.xml">RSS Feed</a> ·
+        <a href="robots.txt">robots.txt</a>
       </p>
     </footer>
   </div>
