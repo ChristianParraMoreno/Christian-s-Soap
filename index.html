@@ -29,7 +29,9 @@
   </script>
   <!-- Event snippet for Soap Blog conversion page -->
   <script>
-    const testOrderId = 'BLOG-TEST-' + Math.floor(Math.random() * 100000);
+    // Example output at 2026-11-09 23:28 UTC -> "BLOG-TEST-20261109-2328"
+    const utcTimestamp = new Date().toISOString().slice(0, 16).replace(/[-:]/g, '').replace('T', '-');
+    const testOrderId = 'BLOG-TEST-' + utcTimestamp;
     gtag('event', 'conversion', {
       'send_to': 'AW-18024142456/QbviCIW4xbEdEPisypJD',
       'transaction_id': testOrderId,
