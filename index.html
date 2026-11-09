@@ -29,8 +29,10 @@
   </script>
   <!-- Event snippet for Soap Blog conversion page -->
   <script>
+    const testOrderId = 'BLOG-TEST-' + Math.floor(Math.random() * 100000);
     gtag('event', 'conversion', {
       'send_to': 'AW-18024142456/QbviCIW4xbEdEPisypJD',
+      'transaction_id': testOrderId,
       'value': 1.0,
       'currency': 'USD'
     });
